@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Silid Aralan, Inc.</title>
+    <link href= "../css/style.css" type="text/css" rel="stylesheet">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+     <link href="../bower_components/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <script>
+         $(document).ready(function() {
+
+          $('body').smoothScroll({
+            delegateSelector: 'ul.mainnav a'
+          });
+
+          $('p.subnav a').click(function(event) {
+            event.preventDefault();
+            var link = this;
+            $.smoothScroll({
+              scrollTarget: link.hash
+            });
+          });
+
+          $('#change-speed').bind('click', function() {
+            var $p1 = $('ul.mainnav a').first();
+            var p1Opts = $p1.smoothScroll('options') || {};
+
+            p1Opts.speed = p1Opts.speed === 1400 ? 400 : 1400;
+            $p1.smoothScroll('options', p1Opts);
+          });
+
+          $('button.scrollsomething').bind('click', function(event) {
+            event.preventDefault();
+            $.smoothScroll({
+              scrollElement: $('div.scrollme'),
+              scrollTarget: '#findme'
+            });
+          });
+          $('button.scrollhorz').bind('click', function(event) {
+            event.preventDefault();
+            $.smoothScroll({
+              direction: 'left',
+              scrollElement: $('div.scrollme'),
+              scrollTarget: '.horiz'
+            });
+
+          });
+
+        });
+
+$(function(){
+  $("table").colResizable();
+});
+    </script>
+</head>
+<body>
+
+    <!-- Navigation and Header -->
+    <div id="navigation">
+        <div id="cssmenu">
+            <ul class="mainnav">
+                <li><img src="../img/sai-logo white.png" width="100px" style="margin-top:5%;margin-bottom:5%;margin-right:51%;"></li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href='#who-we-are' class="smoothScroll">Who we are</a></li>
+                <li><a href='#program-id' class="smoothScroll">Programs</a></li>
+                <li><a href='#sponsor' class="smoothScroll">Sponsors</a></li>
+                <li><a href='#footer' class="smoothScroll">Support</a></li>
+            </ul>
+        </div>   
+    </div>
+     <!-- Navigation and Header -->
+
+    <!-- Page Cover Content -->
+    <div id="page-cover">
+        <center>
+        <div class="title-cover">
+            <h1 class="page-title">Passion for Learning</h1>
+            <h2 class="page-title-sub">"We don't teach kids how to learn, We teach them how to love learning."</h1>
+        </div> 
+        </center>
+    </div>
+    <!-- Page Cover Content -->
+    <div id="program-id" class="container-fluid">
+    <div id="program-id" class="row parent">
+    <center>
+        <div id="sub-program" class="col-sm-24 col-md-6 col-lg-4 ">
+        <button type="button" class="program-btn" data-toggle="modal" data-target="#gz">
+            <img src="../img/gz.jpg" width="350px">
+            <h4>Ground Zero</h4>
+        </button>
+        </div>
+        <div id="sub-program" class="col-sm-12 col-md-6 col-lg-4 ">
+            <button type="button" class="program-btn" data-toggle="modal" data-target="#ilead">
+            <img src="../img/ilead.jpg" width="350px">
+            <h4>iLEAD</h4>
+        </button>
+        </div>
+        <div id="sub-program" class="col-sm-12 col-md-12 col-lg-4 ">
+        <button type="button" class="program-btn" data-toggle="modal" data-target="#leap">
+            <img src="../img/leap.jpg" width="350px">
+            <h4>LEAP</h4>
+        </button>
+        </div>
+    </center>
+    </div>
+    </div>
+    <div id="who-we-are" style="padding-top:4%;">
+        <div class="col-sm-12 col-md-5 col-lg-5" style="padding-right: 10%;">
+            <aside class="who-box">
+                <h2>WHO<br>
+                <span>WE</span><br>
+                ARE<span>.</span></h2>
+            </aside>
+        </div>
+        <div class="col-sm-12 col-md-7 ol-lg-7">
+            <p style="padding:12% 20% 0% 0%; font-size:17px; padding-left: 10%">
+            Silid Aralan Inc. (SAI) is a non-profit organization that aims to give low performing, underprivileged students confidence in their own capabilities as a means of affecting their academic performance for the better.
+            </p>
+            <p style="padding:3% 20% 0% 0%; font-size:17px; padding-left: 10%; padding-bottom:3%">
+            Despite not actually providing academic tutorials during their sessions with students, SAI has a proven track record of being able to boost their students’ academic performance by focusing on practical applications of values and customizing daily learnings to the student’s passions and hobbies.
+            </p>
+            <button style="margin-left:22%;" type="button" class="btn btn-warning btn-lg">Know more about us here</button>
+        </div>
+    </div>
+    <div id="sponsor">
+        <center>
+            <h1 class="content-title">Thanks to our extraordinary sponsors</h1>
+            <div >
+            <table class=".Table" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td><img id="sponsor-img" src="../img/sponsor/celine.png" width="150"></td>
+                    <td><img id="sponsor-img" src="../img/sponsor/deped.png" width="150"></td>
+                    <td><img id="sponsor-img" src="../img/sponsor/f1c.png" width="150"></td>
+                    <td><img id="sponsor-img" src="../img/sponsor/hsbc.png" width="150"></td>
+                </tr>
+                <tr>
+                    <td><img id="sponsor-img" src="../img/sponsor/lighthouse.png" width="150"></td>
+                    <td><img id="sponsor-img" src="../img/sponsor/monark.png" width="150"></td>
+                    <td><img id="sponsor-img" src="../img/sponsor/smart.png" width="150"></td>
+                    <td><img id="sponsor-img" src="../img/sponsor/fmm.png" width="150"></td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </center>
+        <a href="javascript:pageScroll()">Scroll Page</a>
+    </div>
+    <!-- Add new div for new content -->
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="footer-left">
+            <div class="col-lg-2">&nbsp;</div>
+            <div class="col-lg-8" style="margin-top:8%;">
+                <h2 style="margin-bottom:3%;">Quick links</h2>
+                <ul>
+                    <li><a href='#'>Who we are</a></li>
+                    <li><a href='#'>History</a></li>
+                    <li><a href='#'>Programs</a></li>
+                    <li><a href='#'>Latest Activity</a></li>
+                    <li><a href='#'>Mission Vision</a></li>
+                    <li><a href='#'>People behind</a></li>
+                    <li><a href='#'>Profile</a></li>
+                    <li><a href='#'>Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-center">
+            <div class="col-lg-10" style="margin-top:8%;">
+                <h2 style="margin-bottom:10%;">Keep in touch</h2>
+                <a class="btn btn-block btn-social btn-facebook">
+                    <i class="fa fa-facebook"></i> Sign in with Facebook
+                </a>
+                <a class="btn btn-block btn-social btn-google-plus">
+                    <i class="fa fa-google-plus"></i> Sign in with Google
+                </a>
+                <a class="btn btn-block btn-social btn-instagram">
+                    <i class="fa fa-instagram"></i> Sign in with Instagram
+                </a>
+                 <a class="btn btn-block btn-social btn-twitter">
+                    <i class="fa fa-twitter"></i> Sign in with Twitter
+                </a>
+                <h2 style="margin-bottom:10%;">Contact Us</h2>
+                <p><b style="color:white;">PHONE: </b>429 29 553</p>
+                <p><b style="color:white;">CELL:  </b>+63 919 3244 965</p>
+                <p><b style="color:white;">EMAIL: </b>info@silidaralan.org</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="col-lg-8" style="margin-top:8%;">
+                <h2 style="margin-bottom:10%;">Newsletter</h2>
+                <p>Subscribe to our newsletter and get monthly updates, deals, and tutorials straight to your inbox</p>
+                <div class="form-group input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control" placeholder="Email Address">
+                </div>
+                <div class="form-group input-group">
+                    <span class="input-group-addon">&</span>
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <h2 style="margin-bottom:10%;">SAI Website 3.0</h2>
+                <a href="#">Developers </a>|<a href="#"> SAI Website</a>
+                <br>
+                <p>© 2012-2015 Silid Aralan, Inc.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+
+    <!-- Modal Ground Zero-->
+    <div id="gz" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Ground Zero</h4>
+          </div>
+          <div class="modal-body">
+            <p>Ground Zero is the entry-level program of Silid Aralan, Inc. The original program was first implemented in 2008 and focused on academic improvement of primary-aged low-performing public school students. Since then it has developed into a 3-year program beginning with grade two public school students identified as non-readers by their teachers. Learners engage in fun and interactive sessions with the aim of developing their love for reading as they begin to learn how to read. Learning sessions are customized to each learner's learning style assisting him or her to acquire the required competencies to move on to the second level of Silid Aralan, Inc Learning Program.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal iLEAD-->
+    <div id="ilead" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">iLEAD</h4>
+          </div>
+          <div class="modal-body">
+            <p><b>iLEAD</b> is the flagship program of Silid Aralan, Inc. Launched in 2012, iLEAD is a leadership program that starts off with character building. It is a 6-year program with two levels:
+            </p>
+            <p><b>Junior iLEAD</b> learning sessions focus on the Rights of a Child (United Nations Convention on the Rights of a Child). Learners are equipped with the knowledge and understanding of their rights and the responsibilities that go hand-in-hand with them. Outputs of the program are their own “My Vision Book” and mini-community projects, among others.</p>
+            <br/>
+            <p><b>In Senior iLEAD</b>, learners focus on planning, implementing and monitoring their own projects to create an impact on their community. The learners are equipped with leadership skills such as problem solving, risk taking, and team management. They are also taught how to write grant proposals and present business plans.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Leap-->
+    <div id="leap" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">LEAP</h4>
+          </div>
+          <div class="modal-body">
+            <p>LEAP is an extension program for Silid Aralan, Inc. alumni (grade 11-onwards). Learners who have completed iLEAD are invited to join this initiative to support them in achieving their personal goals. To reinforce their chosen path, professionals will coach learners and develop personalized internship plans.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascripts -->
+    <script src="../jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../jquery/jquery.js" type="text/javascript"></script>
+    <script src="../jquery/jquery.smooth-scroll.js" type="text/javascript"></script>
+    <script src="../js/script.js" type="text/javascript"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../css/smoothscroll.js"></script>
+   
+</body>
+</html>
